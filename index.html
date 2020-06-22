@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="post">
+        <input type="checkbox" id="all"> همه
+        <br>
+        <input type="checkbox" value="25.000">مرغ
+        <br>
+        <input type="checkbox" value="10.000">سيب زميني
+        <br>
+        <input type="checkbox" value="15.000">برگر
+        <br>
+        <input type="checkbox" value="40.000">كباب
+        <br>
+        <input type="checkbox" value="17.000">تن ماهي
+        <br>
+        <input type="checkbox" value="23.000">كوبيد
+        <br>
+        <input type="checkbox" value="12.000">نودل
+
+    </form>
+    <div id="sum"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    </script>
+    <script>
+        /* eslint-disable */
+        $('input:not(#all)').on('click', function () {
+            billGenarator();
+        })
+        $('#all').on('click', function () {
+            $('input:not(#all)').prop('checked', $(this).is(':checked'))
+            billGenarator()
+        })
+
+        function billGenarator() {
+            let sum = 0;
+            $.each($('input:not(#all):checked'), function (index, el) {
+
+                sum += parseInt($(this).val());
+            })
+            $('#sum').text('your bill is :' + sum)
+        }
+    </script>
+</body>
+
+</html>
