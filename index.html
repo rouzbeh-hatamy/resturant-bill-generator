@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>form</title>
+    <title>resturant bill generator</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,54 +10,150 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <form action="post">
-        <input type="checkbox" id="all"> همه
-        <br>
-        <input type="checkbox" value="25.000">مرغ
-        <br>
-        <input type="checkbox" value="10.000">سيب زميني
-        <br>
-        <input type="checkbox" value="15.000">برگر
-        <br>
-        <input type="checkbox" value="40.000">كباب
-        <br>
-        <input type="checkbox" value="17.000">تن ماهي
-        <br>
-        <input type="checkbox" value="23.000">كوبيد
-        <br>
-        <input type="checkbox" value="12.000">نودل
-
-    </form>
-    <div id="sum"></div>
+    <div class="container px-0">
+        <div class="header sticky-top py-4 bg-white">
+            <h1>رستوران ايتاليايی ژوانی</h1>
+        </div>
+        <div class="menu">
+            <div class="item d-flex justify-content-start">
+                <div class="food-pic col-3">
+                    <img src="./assets/pasta penne alferedo.jpg" alt="">
+                </div>
+                <div class="food details col-5">
+                    <h4>پاستا پنه آلفردو</h4>
+                    <h5>۴۷.۰۰۰ تومان</h5>
+                    <div class="select d-flex my-4">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div id="foodBill" class="col-4 align-self-end ">
+                    ۵۷.۰۰۰ تومان
+                </div>
+            </div>
+            <div class="item d-flex justify-content-start">
+                <div class="food-pic col-3">
+                    <img src="./assets/pasta penne alferedo.jpg" alt="">
+                </div>
+                <div class="food details col-5">
+                    <h4>پاستا پنه آلفردو</h4>
+                    <h5>۴۷.۰۰۰ تومان</h5>
+                    <div class="select d-flex my-4">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div id="foodBill" class="col-4 align-self-end ">
+                    ۵۷.۰۰۰ تومان
+                </div>
+            </div>
+            <div class="item d-flex justify-content-start">
+                <div class="food-pic col-3">
+                    <img src="./assets/pasta penne alferedo.jpg" alt="">
+                </div>
+                <div class="food details col-5">
+                    <h4>پاستا پنه آلفردو</h4>
+                    <h5>۴۷.۰۰۰ تومان</h5>
+                    <div class="select d-flex my-4">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div id="foodBill" class="col-4 align-self-end ">
+                    ۵۷.۰۰۰ تومان
+                </div>
+            </div>
+            <div class="item d-flex justify-content-start">
+                <div class="food-pic col-3">
+                    <img src="./assets/pasta penne alferedo.jpg" alt="">
+                </div>
+                <div class="food details col-5">
+                    <h4>پاستا پنه آلفردو</h4>
+                    <h5>۴۷.۰۰۰ تومان</h5>
+                    <div class="select d-flex my-4">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div id="foodBill" class="col-4 align-self-end ">
+                    ۵۷.۰۰۰ تومان
+                </div>
+            </div>
+            <div class="item d-flex justify-content-start">
+                <div class="food-pic col-3">
+                    <img src="./assets/pasta penne alferedo.jpg" alt="">
+                </div>
+                <div class="food details col-5">
+                    <h4>پاستا پنه آلفردو</h4>
+                    <h5>۴۷.۰۰۰ تومان</h5>
+                    <div class="select d-flex my-4">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div id="foodBill" class="col-4 align-self-end ">
+                    ۵۷.۰۰۰ تومان
+                </div>
+            </div>
+            <div class="item d-flex justify-content-start">
+                <div class="food-pic col-3">
+                    <img src="./assets/pasta penne alferedo.jpg" alt="">
+                </div>
+                <div class="food details col-5">
+                    <h4>پاستا پنه آلفردو</h4>
+                    <h5>۴۷.۰۰۰ تومان</h5>
+                    <div class="select d-flex my-4">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div id="foodBill" class="col-4 align-self-end ">
+                    ۵۷.۰۰۰ تومان
+                </div>
+            </div>
+            <div class="item d-flex justify-content-start">
+                <div class="food-pic col-3">
+                    <img src="./assets/pasta penne alferedo.jpg" alt="">
+                </div>
+                <div class="food details col-5">
+                    <h4>پاستا پنه آلفردو</h4>
+                    <h5>۴۷.۰۰۰ تومان</h5>
+                    <div class="select d-flex my-4">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div id="foodBill" class="col-4 align-self-end ">
+                    ۵۷.۰۰۰ تومان
+                </div>
+            </div>
+        </div>
+        <div class="bill"></div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
-    <script>
-        /* eslint-disable */
-        $('input:not(#all)').on('click', function () {
-            billGenarator();
-        })
-        $('#all').on('click', function () {
-            $('input:not(#all)').prop('checked', $(this).is(':checked'))
-            billGenarator()
-        })
-
-        function billGenarator() {
-            let sum = 0;
-            $.each($('input:not(#all):checked'), function (index, el) {
-
-                sum += parseInt($(this).val());
-            })
-            $('#sum').text('your bill is :' + sum)
-        }
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script src="./scripts.js"></script>
 </body>
 
 </html>
