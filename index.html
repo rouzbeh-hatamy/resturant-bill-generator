@@ -28,13 +28,13 @@
                     <h4>پاستا پنه آلفردو</h4>
                     <h5>۴۷.۰۰۰ تومان</h5>
                     <div class="select d-flex my-4">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-plus" aria-hidden="true" data-counter="0" value="47000"></i>
+                        <h5 id="number"></h5>
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div id="foodBill" class="col-4 align-self-end ">
-                    ۵۷.۰۰۰ تومان
+
                 </div>
             </div>
             <div class="item d-flex justify-content-start">
@@ -45,13 +45,13 @@
                     <h4>پاستا پنه آلفردو</h4>
                     <h5>۴۷.۰۰۰ تومان</h5>
                     <div class="select d-flex my-4">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-plus" data-counter="0" value="40000" aria-hidden="true"></i>
+                        <h5 id="number"></h5>
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div id="foodBill" class="col-4 align-self-end ">
-                    ۵۷.۰۰۰ تومان
+
                 </div>
             </div>
             <div class="item d-flex justify-content-start">
@@ -62,13 +62,13 @@
                     <h4>پاستا پنه آلفردو</h4>
                     <h5>۴۷.۰۰۰ تومان</h5>
                     <div class="select d-flex my-4">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-plus" data-counter="0" value="67000" aria-hidden="true"></i>
+                        <h5 id="number"></h5>
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div id="foodBill" class="col-4 align-self-end ">
-                    ۵۷.۰۰۰ تومان
+
                 </div>
             </div>
             <div class="item d-flex justify-content-start">
@@ -79,13 +79,13 @@
                     <h4>پاستا پنه آلفردو</h4>
                     <h5>۴۷.۰۰۰ تومان</h5>
                     <div class="select d-flex my-4">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-plus" data-counter="0" value="15000" aria-hidden="true"></i>
+                        <h5 id="number"></h5>
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div id="foodBill" class="col-4 align-self-end ">
-                    ۵۷.۰۰۰ تومان
+
                 </div>
             </div>
             <div class="item d-flex justify-content-start">
@@ -96,13 +96,13 @@
                     <h4>پاستا پنه آلفردو</h4>
                     <h5>۴۷.۰۰۰ تومان</h5>
                     <div class="select d-flex my-4">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-plus" data-counter="0" value="20000" aria-hidden="true"></i>
+                        <h5 id="number"></h5>
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div id="foodBill" class="col-4 align-self-end ">
-                    ۵۷.۰۰۰ تومان
+
                 </div>
             </div>
             <div class="item d-flex justify-content-start">
@@ -113,13 +113,13 @@
                     <h4>پاستا پنه آلفردو</h4>
                     <h5>۴۷.۰۰۰ تومان</h5>
                     <div class="select d-flex my-4">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-plus" data-counter="0" value="80000" aria-hidden="true"></i>
+                        <h5 id="number"></h5>
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div id="foodBill" class="col-4 align-self-end ">
-                    ۵۷.۰۰۰ تومان
+
                 </div>
             </div>
             <div class="item d-flex justify-content-start">
@@ -130,17 +130,43 @@
                     <h4>پاستا پنه آلفردو</h4>
                     <h5>۴۷.۰۰۰ تومان</h5>
                     <div class="select d-flex my-4">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                        <h5 id="number"> 3</h5>
+                        <i class="fa fa-plus" data-counter="0" value="36000" aria-hidden="true"></i>
+                        <h5 id="number"></h5>
                         <i class="fa fa-minus" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div id="foodBill" class="col-4 align-self-end ">
-                    ۵۷.۰۰۰ تومان
+
                 </div>
             </div>
         </div>
-        <div class="bill"></div>
+        <div class="bill sticky-bottom bg-light d-flex">
+            <div class="col-5 ">
+                <div class="sum justify-content-between d-flex mt-2">
+                    <span>جمع کل سفارشات :</span>
+                    <span id="sum"></span>
+                </div>
+                <div class="service justify-content-between d-flex my-3">
+                    <span>حق سرویس و کارمزد :</span>
+                    <span id="service"></span>
+                </div>
+                <div class="sum-discount justify-content-between d-flex mb-4">
+                    <span>تخفیف :</span>
+                    <span id="sumDiscount"> </span>
+                </div>
+                <h1 id="finalSum"></h1>
+            </div>
+            <div class="col-7">
+                <div class="discount">
+                    <div class="input-group mt-4 mb-3">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        <input type="text" class="form-control py-4 discount-input" placeholder="کد تخفیف"
+                            aria-label="discount">
+                    </div>
+                    <button type="button" name="" id="" class="btn btn-lg btn-block py-3">ثبت سفارش</button>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
