@@ -61,11 +61,13 @@ body {
 }
 
 .bill {
-    height: 20vh;
+    height: 0vh;
+    visibility: hidden;
     box-shadow: 0 -5px 9px -2px #9f9f9f;
     border-bottom-left-radius: 36px;
     border-bottom-right-radius: 36px;
     direction: rtl;
+    transition: all 1s;
 }
 
 .discount-input {
@@ -83,7 +85,7 @@ body {
 
 .input-group i {
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     font-size: 2.5rem;
     align-self: center;
     left: 2%;
@@ -94,6 +96,10 @@ body {
     color: white;
     font-size: xx-large;
     border-radius: 12px;
+}
+
+.sum-discount {
+    visibility: hidden;
 }
 
 .col-5 .d-flex span {

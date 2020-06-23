@@ -3,6 +3,15 @@ $(document).ready(function() {
   let sum = 0;
   let counter;
   let foodBill = 0;
+  let code;
+  // sum func
+  function summary(number = 0) {
+    $('#sum').html(`${number} تومان`);
+    const service = number * 0.05;
+    $('#service').html(`${service}تومان`);
+    $('#finalSum').html(`${service + number}`);
+    return service + number;
+  }
   // scroll
   $(window).scroll(function() {
     const scroll = $(window).scrollTop();
@@ -19,6 +28,7 @@ $(document).ready(function() {
     counter += 1;
     $(this).attr('data-counter', `${counter}`);
     sum += Number($(this).attr('value'));
+    summary(sum);
     $(this)
       .siblings('.fa-minus')
       .css('opacity', '1');
@@ -31,6 +41,9 @@ $(document).ready(function() {
       .parent()
       .siblings('#foodBill')
       .html(`${foodBill} تومان`);
+    $('.bill').css('height', '20vh');
+    $('.bill').css('visibility', 'visible');
+    discount(code);
   });
   // minus btn
   $('.fa-minus').on('click', function() {
@@ -40,6 +53,7 @@ $(document).ready(function() {
         .siblings('.fa-plus')
         .attr('value')
     );
+    summary(sum);
     foodBill =
       counter *
       Number(
@@ -70,6 +84,30 @@ $(document).ready(function() {
     $(this)
       .siblings('.fa-plus')
       .attr('data-counter', `${counter}`);
-    console.log($(this).attr('value'));
+    discount(code);
+  });
+  // discount
+  function discount(inputcode) {
+    const codes = [
+      { code: 'abcd', value: 10000 },
+      { code: 'efgh', value: 25000 },
+    ];
+    for (let index = 0; index < codes.length; index++) {
+      if (inputcode === Object.values(codes[index])[0]) {
+        $('.sum-discount').css('visibility', 'visible');
+        const all = sum + sum * 0.05;
+        const final = all - Object.values(codes[index])[1];
+        $('#sumDiscount').html(Object.values(codes[index])[1]);
+        if (final > 0) {
+          $('#finalSum').html(final);
+        } else {
+          $('#finalSum').html('0');
+        }
+      }
+    }
+  }
+  $('.fa-plus-circle').on('click', function() {
+    code = $('#discountCode').val();
+    discount(code);
   });
 });
