@@ -3,7 +3,8 @@ $(document).ready(function() {
   let sum = 0;
   let counter;
   let foodBill = 0;
-  let code;
+  let code = null;
+  let isCode = false;
   // sum func
   function summary(number = 0) {
     $('#sum').html(`${number} تومان`);
@@ -18,8 +19,8 @@ $(document).ready(function() {
     if (scroll >= 50) {
       $('.header').css('border-radius', '0px');
     } else {
-      $('.header').css('border-top-left-radius', '36px');
-      $('.header').css('border-top-right-radius', '36px');
+      $('.header').css('border-top-left-radius', '30px');
+      $('.header').css('border-top-right-radius', '30px');
     }
   });
   // plus icon click
@@ -41,7 +42,8 @@ $(document).ready(function() {
       .parent()
       .siblings('#foodBill')
       .html(`${foodBill} تومان`);
-    $('.bill').css('height', '20vh');
+    $('.bill').css('height', 'auto');
+    $('.bill').css('opacity', '1');
     $('.bill').css('visibility', 'visible');
     discount(code);
   });
@@ -92,9 +94,17 @@ $(document).ready(function() {
       { code: 'abcd', value: 10000 },
       { code: 'efgh', value: 25000 },
     ];
+
     for (let index = 0; index < codes.length; index++) {
       if (inputcode === Object.values(codes[index])[0]) {
+        isCode = !isCode;
         $('.sum-discount').css('visibility', 'visible');
+        $('.discount-input').css(
+          'background-color',
+          'rgba(46, 204, 113, 0.18)'
+        );
+        $('.fa-plus-circle').addClass('fa-trash');
+        $('.fa-plus-circle').attr('aria-hidden', 'false');
         const all = sum + sum * 0.05;
         const final = all - Object.values(codes[index])[1];
         $('#sumDiscount').html(Object.values(codes[index])[1]);
@@ -103,11 +113,32 @@ $(document).ready(function() {
         } else {
           $('#finalSum').html('0');
         }
+      } else if (inputcode !== null && isCode === false) {
+        $('.discount-input').css('background-color', 'rgba(231, 76, 60, 0.18)');
+        $('#discountCode').val('كد اشتباه است');
+      } else if (inputcode === null) {
+        $('#sumDiscount').html('0');
+        const all = sum + sum * 0.05;
+        if (all > 0) {
+          $('#finalSum').html(all);
+        } else {
+          $('#finalSum').html('0');
+        }
       }
     }
   }
+  // discount input
   $('.fa-plus-circle').on('click', function() {
-    code = $('#discountCode').val();
-    discount(code);
+    if ($('.fa-plus-circle').hasClass('fa-trash')) {
+      code = null;
+      isCode = !isCode;
+      $('.fa-plus-circle').removeClass('fa-trash');
+      $('.discount-input').css('background-color', 'white');
+      $('#discountCode').val('');
+      discount(code);
+    } else {
+      code = $('#discountCode').val();
+      discount(code);
+    }
   });
 });
