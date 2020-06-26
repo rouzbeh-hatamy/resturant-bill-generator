@@ -1,15 +1,73 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Yekan';
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    z-index: 1040;
+
+}
+
+.preloader.complete {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.preloader::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    transition: 1s;
+}
+
+.preloader.complete::before {
+    left: -50%;
+}
+
+.preloader::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    transition: 1s;
+}
+
+.preloader.complete::after {
+    right: -50%;
+}
+
+.loader {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 800px;
+    z-index: 2000;
+}
+
+svg {
+    overflow: visible !important;
 }
 
 .container {
     border: solid 7px rgba(241, 196, 15, 0.5);
     border-radius: 36px;
+    height: 98vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -63,12 +121,12 @@ body {
 .bill {
     height: 0vh;
     opacity: 0;
-    visibility: hidden;
     box-shadow: 0 -5px 9px -2px #9f9f9f;
     border-bottom-left-radius: 36px;
     border-bottom-right-radius: 36px;
     direction: rtl;
-    transition: all 1s;
+    transform: translateY(150px);
+    transition: transform 0.7s, opacity 1s;
 }
 
 .discount-input {
@@ -114,5 +172,245 @@ body {
 
 @font-face {
     font-family: 'Yekan';
-    src: url('./assets/B\ Yekan+.ttf');
+    src: url('./assets/Yekan.ttf');
+}
+
+.cls-1 {
+    fill: url(#Degradado_sin_nombre_61);
+    animation: leftlogo 5s ease forwards;
+}
+
+.cls-2 {
+    fill: url(#Degradado_sin_nombre_61-2);
+    animation: texts 1s 4s forwards;
+
+}
+
+.cls-3 {
+    fill: url(#Degradado_sin_nombre_61-3);
+    transform: translate(-252px, -126px);
+    animation: dots 2s 2s forwards;
+}
+
+.cls-4 {
+    fill: url(#Degradado_sin_nombre_61-4);
+    transform: translate(252px, -126px);
+    animation: dots 2s 2s forwards;
+}
+
+.cls-5 {
+    fill: url(#Degradado_sin_nombre_61-5);
+    animation: leftlogo 5s ease forwards;
+
+}
+
+.cls-6 {
+    fill: url(#Degradado_sin_nombre_61-6);
+    animation: leftlogo 5s ease forwards;
+}
+
+.cls-7 {
+    fill: url(#Degradado_sin_nombre_61-7);
+    animation: rightlogo 5s forwards;
+
+}
+
+.cls-8 {
+    fill: url(#Degradado_sin_nombre_61-8);
+    animation: leftlogo 5s forwards;
+
+}
+
+.cls-9 {
+    fill: url(#Degradado_sin_nombre_61-9);
+    animation: rightlogo 5s forwards;
+
+}
+
+.cls-10 {
+    fill: url(#Degradado_sin_nombre_61-10);
+    animation: rightlogo 5s forwards;
+
+}
+
+.cls-11 {
+    fill: url(#Degradado_sin_nombre_61-11);
+    animation: rightlogo 5s forwards;
+}
+
+.cls-12 {
+    fill: url(#Degradado_sin_nombre_61-12);
+    animation: leftlogo 5s ease forwards;
+}
+
+.cls-13 {
+    fill: url(#Degradado_sin_nombre_61-13);
+    animation: rightlogo 5s forwards;
+
+}
+
+.cls-14 {
+    fill: url(#Degradado_sin_nombre_61-14);
+    animation: rightlogo 5s forwards;
+
+}
+
+.cls-15 {
+    fill: url(#Degradado_sin_nombre_61-15);
+    animation: rightlogo 5s forwards;
+
+}
+
+.cls-16 {
+    fill: url(#Degradado_sin_nombre_61-16);
+    animation: rightlogo 5s forwards;
+
+}
+
+.cls-17 {
+    fill: url(#Degradado_sin_nombre_61-17);
+    animation: rightlogo 5s forwards;
+
+}
+
+.cls-18 {
+    fill: url(#Degradado_sin_nombre_61-18);
+    animation: leftlogo 5s ease forwards;
+
+}
+
+.cls-19 {
+    fill: url(#Degradado_sin_nombre_61-19);
+    animation: rightlogo 5s forwards;
+
+}
+
+.cls-20 {
+    font-size: 52.15px;
+    font-family: Brawler;
+    animation: logo 2s 4s forwards;
+}
+
+.cls-20,
+.cls-25 {
+    fill: #ffdca4;
+}
+
+.cls-21 {
+    font-size: 15.24px;
+    fill: #31251a;
+    animation: texts 1s 4s forwards;
+
+}
+
+.cls-21,
+.cls-25 {
+    font-family: Aller-Bold;
+    font-weight: 700;
+}
+
+.cls-22 {
+    letter-spacing: -0.01em;
+}
+
+.cls-23 {
+    letter-spacing: 0em;
+}
+
+.cls-24 {
+    letter-spacing: -0.04em;
+}
+
+.cls-25 {
+    font-size: 23px;
+    animation: texts 1s 4s forwards;
+}
+
+.cls-26 {
+    letter-spacing: -0.09em;
+}
+
+@keyframes leftlogo {
+    0% {
+        transform: translate(-52px, -500px);
+    }
+
+    25% {
+        transform: translate(-52px, -126px);
+    }
+
+    60% {
+        transform: translate(-52px, -126px);
+    }
+
+    80% {
+        transform: rotate(-90deg) translate(-406px, -72px);
+    }
+
+    100% {
+        transform: translateX(-220px) rotate(-90deg) translate(-406px, -52px);
+
+
+    }
+}
+
+@keyframes rightlogo {
+    0% {
+        transform: translate(-52px, 500px);
+    }
+
+    25% {
+        transform: translate(-52px, -126px);
+    }
+
+    60% {
+        transform: translate(-52px, -126px);
+    }
+
+    80% {
+        transform: rotate(-90deg) translate(-406px, -70px);
+    }
+
+    100% {
+        transform: translateX(180px) rotate(-90deg) translate(-406px, -52px);
+
+
+    }
+}
+
+@keyframes dots {
+    0% {}
+
+    50% {
+        transform: translate(-52px, -126px);
+
+    }
+
+    100% {}
+}
+
+@keyframes texts {
+    0% {}
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes logo {
+    0% {}
+
+    100% {
+        transform: scale(1.2) translate(-10px, 150px);
+    }
+}
+
+@font-face {
+    font-family: Aller-Bold;
+    src: url(./assets/LOGO/Aller_Bd.ttf);
+}
+
+@font-face {
+    font-family: Brawler;
+    src: url(./assets/LOGO/Brawler.otf);
 }

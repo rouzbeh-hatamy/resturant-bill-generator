@@ -1,3 +1,9 @@
+$(window).on('load', function() {
+  setTimeout(function() {
+    $('.loader').fadeOut();
+    $('.preloader').addClass('complete');
+  }, 4800);
+});
 $(document).ready(function() {
   // globals
   let sum = 0;
@@ -9,7 +15,7 @@ $(document).ready(function() {
   function summary(number = 0) {
     $('#sum').html(`${number} تومان`);
     const service = number * 0.05;
-    $('#service').html(`${service}تومان`);
+    $('#service').html(`${service} تومان`);
     $('#finalSum').html(`${service + number}`);
     return service + number;
   }
@@ -42,9 +48,12 @@ $(document).ready(function() {
       .parent()
       .siblings('#foodBill')
       .html(`${foodBill} تومان`);
-    $('.bill').css('height', 'auto');
-    $('.bill').css('opacity', '1');
-    $('.bill').css('visibility', 'visible');
+    $('.bill').css({
+      height: 'auto',
+      opacity: '1',
+      transform: 'translateY(0px)',
+    });
+
     discount(code);
   });
   // minus btn
