@@ -177,7 +177,7 @@ svg {
 
 .cls-1 {
     fill: url(#Degradado_sin_nombre_61);
-    animation: leftlogo 5s ease forwards;
+    animation: leftlogo1 5s ease forwards;
 }
 
 .cls-2 {
@@ -200,36 +200,36 @@ svg {
 
 .cls-5 {
     fill: url(#Degradado_sin_nombre_61-5);
-    animation: leftlogo 5s ease forwards;
+    animation: leftlogo1 5s ease forwards;
 
 }
 
 .cls-6 {
     fill: url(#Degradado_sin_nombre_61-6);
-    animation: leftlogo 5s ease forwards;
+    animation: leftlogo1 5s ease forwards;
 }
 
 .cls-7 {
     fill: url(#Degradado_sin_nombre_61-7);
-    animation: rightlogo 5s forwards;
+    animation: rightlogo1 5s forwards;
 
 }
 
 .cls-8 {
     fill: url(#Degradado_sin_nombre_61-8);
-    animation: leftlogo 5s forwards;
+    animation: leftlogo1 5s forwards;
 
 }
 
 .cls-9 {
     fill: url(#Degradado_sin_nombre_61-9);
-    animation: rightlogo 5s forwards;
+    animation: rightlogo1 5s forwards;
 
 }
 
 .cls-10 {
     fill: url(#Degradado_sin_nombre_61-10);
-    animation: rightlogo 5s forwards;
+    animation: rightlogo1 5s forwards;
 
 }
 
@@ -245,43 +245,43 @@ svg {
 
 .cls-13 {
     fill: url(#Degradado_sin_nombre_61-13);
-    animation: rightlogo 5s forwards;
+    animation: rightlogo1 5s forwards;
 
 }
 
 .cls-14 {
     fill: url(#Degradado_sin_nombre_61-14);
-    animation: rightlogo 5s forwards;
+    animation: rightlogo1 5s forwards;
 
 }
 
 .cls-15 {
     fill: url(#Degradado_sin_nombre_61-15);
-    animation: rightlogo 5s forwards;
+    animation: rightlogo1 5s forwards;
 
 }
 
 .cls-16 {
     fill: url(#Degradado_sin_nombre_61-16);
-    animation: rightlogo 5s forwards;
+    animation: rightlogo1 5s forwards;
 
 }
 
 .cls-17 {
     fill: url(#Degradado_sin_nombre_61-17);
-    animation: rightlogo 5s forwards;
+    animation: rightlogo1 5s forwards;
 
 }
 
 .cls-18 {
     fill: url(#Degradado_sin_nombre_61-18);
-    animation: leftlogo 5s ease forwards;
+    animation: leftlogo1 5s ease forwards;
 
 }
 
 .cls-19 {
     fill: url(#Degradado_sin_nombre_61-19);
-    animation: rightlogo 5s forwards;
+    animation: rightlogo1 5s forwards;
 
 }
 
@@ -344,12 +344,36 @@ svg {
     }
 
     80% {
-        transform: rotate(-90deg) translate(-406px, -72px);
+        transform: rotate(-90deg) translate(-406px, -22px);
     }
 
     100% {
         transform: translateX(-220px) rotate(-90deg) translate(-406px, -52px);
 
+
+    }
+}
+
+@keyframes leftlogo1 {
+    0% {
+        transform: translate(-52px, -500px);
+    }
+
+    25% {
+        transform: translate(-52px, -126px);
+    }
+
+    60% {
+        transform: translate(-52px, -126px);
+    }
+
+    80% {
+        transform: translate(-52px, -126px);
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0;
 
     }
 }
@@ -368,12 +392,36 @@ svg {
     }
 
     80% {
-        transform: rotate(-90deg) translate(-406px, -70px);
+        transform: rotate(-90deg) translate(-452px, -180px) scale(1.18);
     }
 
     100% {
-        transform: translateX(180px) rotate(-90deg) translate(-406px, -52px);
+        transform: translateX(180px) rotate(-90deg) translate(-452px, -52px) scale(1.18);
 
+
+    }
+}
+
+@keyframes rightlogo1 {
+    0% {
+        transform: translate(-52px, 500px);
+    }
+
+    25% {
+        transform: translate(-52px, -126px);
+    }
+
+    60% {
+        transform: translate(-52px, -126px);
+    }
+
+    80% {
+        transform: translate(-52px, -126px);
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0;
 
     }
 }
