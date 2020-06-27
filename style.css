@@ -2,6 +2,8 @@ body {
     font-family: 'Yekan';
 }
 
+
+
 .preloader {
     position: fixed;
     top: 0;
@@ -461,4 +463,37 @@ svg {
 @font-face {
     font-family: Brawler;
     src: url(./assets/LOGO/Brawler.otf);
+}
+
+@media only screen and (min-width: 1025px) {
+    .large-screen {
+        display: flex !important;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        font-family: Aller-Bold;
+
+    }
+
+    .container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .large-screen {
+        display: flex !important;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        font-family: Aller-Bold;
+    }
+
+    .container {
+        display: none;
+    }
 }

@@ -1,4 +1,3 @@
-import { seperateNumbers } from './seprateNumbers.js';
 import { summary } from './sumAndService.js';
 import { discount } from './discount.js';
 import { render } from './render.js';
