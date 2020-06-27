@@ -14,7 +14,7 @@ $(document).ready(function() {
   plus();
   minus();
   discount();
-
+  // discount input
   $('.fa-plus-circle').on('click', function() {
     if ($('.fa-plus-circle').hasClass('fa-trash')) {
       sessionStorage.setItem('code', 'null');
@@ -27,5 +27,15 @@ $(document).ready(function() {
       sessionStorage.setItem('code', `${code}`);
       discount();
     }
+  });
+  // submit button
+  $('#submit').on('click', function() {
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'سفارش شما ثبت شد',
+      showConfirmButton: false,
+      timer: 1500,
+    });
   });
 });
