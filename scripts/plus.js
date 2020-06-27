@@ -1,6 +1,6 @@
 import { seperateNumbers } from './seprateNumbers.js';
 import { summary } from './sumAndService.js';
-import { discount } from './discount';
+import { discount } from './discount.js';
 
 export function plus() {
   let counter;
@@ -32,5 +32,10 @@ export function plus() {
     });
 
     discount(code);
+    sessionStorage.setItem('counter', `${counter}`);
+    sessionStorage.setItem('sum', `${sum}`);
+    sessionStorage.setItem('foodBill', `${foodBill}`);
+    sessionStorage.setItem('code', `${code}`);
+    console.log(sessionStorage);
   });
 }

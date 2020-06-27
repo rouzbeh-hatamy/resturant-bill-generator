@@ -1,5 +1,10 @@
+import { seperateNumbers } from './seprateNumbers.js';
+
 export function discount(inputcode) {
   const codes = { abcd: 10000, efgh: 25000 };
+  const sum = JSON.parse(sessionStorage.getItem('sum'));
+  console.log(typeof inputcode);
+  console.log(inputcode);
 
   if (codes[inputcode]) {
     $('.sum-discount').css('visibility', 'visible');
