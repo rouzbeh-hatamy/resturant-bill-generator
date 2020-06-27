@@ -4,6 +4,7 @@
 ## Resturant menu
 * language : Fa
 * simple menu with complete bill generator
+* discount codes are : ```abcd``` and ```efgh```
 * use it on <strong>tablet size only</strong>
 
 to see the layout just click on the link below
