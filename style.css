@@ -25,7 +25,7 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    width: 50%;
+    width: 51%;
     height: 100%;
     background-color: black;
     transition: 1s;
@@ -39,7 +39,7 @@ body {
     content: '';
     position: absolute;
     right: 0;
-    width: 50%;
+    width: 51%;
     height: 100%;
     background-color: black;
     transition: 1s;
@@ -191,13 +191,13 @@ svg {
 .cls-3 {
     fill: url(#Degradado_sin_nombre_61-3);
     transform: translate(-252px, -126px);
-    animation: dots 2s 2s forwards;
+    animation: dot1 2s 2s forwards;
 }
 
 .cls-4 {
     fill: url(#Degradado_sin_nombre_61-4);
     transform: translate(252px, -126px);
-    animation: dots 2s 2s forwards;
+    animation: dot2 2s 2s forwards;
 }
 
 .cls-5 {
@@ -238,11 +238,15 @@ svg {
 .cls-11 {
     fill: url(#Degradado_sin_nombre_61-11);
     animation: rightlogo 5s forwards;
+    transform-origin: center;
+
 }
 
 .cls-12 {
     fill: url(#Degradado_sin_nombre_61-12);
     animation: leftlogo 5s ease forwards;
+    transform-origin: center;
+
 }
 
 .cls-13 {
@@ -346,11 +350,11 @@ svg {
     }
 
     80% {
-        transform: rotate(-90deg) translate(-406px, -22px);
+        transform: rotate(-90deg) translate(-75px, -152px);
     }
 
     100% {
-        transform: translateX(-220px) rotate(-90deg) translate(-406px, -52px);
+        transform: translateX(-520px) rotate(-90deg) translate(-75px, -52px);
 
 
     }
@@ -394,11 +398,11 @@ svg {
     }
 
     80% {
-        transform: rotate(-90deg) translate(-452px, -180px) scale(1.18);
+        transform: rotate(-90deg) translate(-90px, -126px)scale(1.18);
     }
 
     100% {
-        transform: translateX(180px) rotate(-90deg) translate(-452px, -52px) scale(1.18);
+        transform: translateX(380px) rotate(-90deg) translate(-90px, -52px) scale(1.18);
 
 
     }
@@ -428,11 +432,22 @@ svg {
     }
 }
 
-@keyframes dots {
+@keyframes dot1 {
     0% {}
 
     50% {
-        transform: translate(-52px, -126px);
+        transform: translate(-82px, -126px);
+
+    }
+
+    100% {}
+}
+
+@keyframes dot2 {
+    0% {}
+
+    50% {
+        transform: translate(-22px, -126px);
 
     }
 
@@ -451,7 +466,7 @@ svg {
     0% {}
 
     100% {
-        transform: scale(1.2) translate(-10px, 150px);
+        transform: scale(1.2) translate(-35px, 150px);
     }
 }
 
